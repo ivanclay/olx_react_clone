@@ -1,2 +1,3 @@
-# olx_react_clone
-Um "clone" do site OLX como forma de estudar Reactjs.
+# OLX React Clone
+
+A "clone" of the OLX website as a way to study Reactjs. 
