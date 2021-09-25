@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 const Page = (props) => {
   return (
-    <div>Funcionando...</div>
+    <BrowserRouter>
+      <div>Funcionando...YEAH!!!</div>
+    </BrowserRouter>
   );
 }
 
