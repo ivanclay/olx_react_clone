@@ -1,10 +1,11 @@
 # OLX similar frontend for studying Reactjs
 
-Project under construction
+:construction: Project under construction :construction:
 
-Features
+## Features
 - [x] Create project
 - [x] Create README
 - [] Install dependencies
-    - []...
-    - []...
+    - [x] Redux
+    - [x] React-Redux
+- [x] Configure Redux
