@@ -64,8 +64,8 @@ export const HeaderArea = styled.div`
 
                     &.button {
                         background-color: #FF8100;
-                        border-radius: 4px;
-                        padding: 5px 10px;
+                        border-radius: 20px;
+                        padding: 8px 20px;
                         color: #FFF;
                         font-weight: bold;
                     }

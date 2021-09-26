@@ -5,11 +5,12 @@
 ## Features
 - [x] Create project
 - [x] Create README
-- [ ] Install dependencies
+- [x] Install dependencies
     - [x] redux
     - [x] react-Redux
     - [x] react-router-dom
     - [x] styled-components
+    - [ ] js-cookie
 - [x] Configure Redux
 - [x] Configure Router
 - [x] Create Header Component
