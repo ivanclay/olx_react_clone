@@ -21,3 +21,5 @@
 - [x] Configure js-cookie
 - [x] Create 404 route
 - [x] Create 404 page
+- [x] Create login page
+- [ ] Style the 'login page'
