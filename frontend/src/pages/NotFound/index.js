@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 const Page = () => {
     return (
         <div>
-            <div>Página HOME</div>
-            <Link to="/about">Sobre...</Link>
+            <h1>404</h1>
+            <h3>Página não encontrada.</h3>
+            <Link to="/">Home</Link>
         </div>
     );
 }

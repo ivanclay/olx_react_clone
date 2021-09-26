@@ -10,11 +10,14 @@
     - [x] react-Redux
     - [x] react-router-dom
     - [x] styled-components
-    - [ ] js-cookie
+    - [x] js-cookie
 - [x] Configure Redux
 - [x] Configure Router
 - [x] Create Header Component
 - [x] Create Footer Component
 - [x] Apply CSS base
 - [ ] Style the 'Header' component
-- [ ] Style the 'Footer' component.
+- [ ] Style the 'Footer' component
+- [x] Configure js-cookie
+- [x] Create 404 route
+- [x] Create 404 page
