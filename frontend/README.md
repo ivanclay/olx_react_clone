@@ -12,3 +12,6 @@
     - [x] styled-components
 - [x] Configure Redux
 - [x] Configure Router
+- [x] Create Header Component
+- [x] Create Footer Component
+- [x] Apply CSS base
