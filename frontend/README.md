@@ -9,5 +9,6 @@
     - [x] redux
     - [x] react-Redux
     - [x] react-router-dom
+    - [x] styled-components
 - [x] Configure Redux
-- [ ] Configure Router
+- [x] Configure Router
