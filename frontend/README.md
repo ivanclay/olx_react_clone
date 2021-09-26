@@ -15,3 +15,5 @@
 - [x] Create Header Component
 - [x] Create Footer Component
 - [x] Apply CSS base
+- [ ] Style the 'Header' component
+- [ ] Style the 'Footer' component.
