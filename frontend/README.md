@@ -33,3 +33,4 @@
 - [x] Create user registration layout
 - [x] Implement getStateAddress API consumer
 - [x] Implement user registration
+- [x] Create Search Area Layout
