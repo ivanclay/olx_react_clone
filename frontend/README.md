@@ -32,3 +32,4 @@
 - [x] Implement logout
 - [x] Create user registration layout
 - [x] Implement getStateAddress API consumer
+- [x] Implement user registration

@@ -32,7 +32,15 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setDisabled(true);
-        const json = await api.login(email, password);
+        setError('');
+
+        if(password !== confirmPassword){
+            setError('Senhas diferentes.');
+            setDisabled(false);
+            return;
+        }
+
+        const json = await api.register(name, email, password, stateAddress);
 
         if(json.error){
             setError(json.error);
