@@ -22,4 +22,6 @@
 - [x] Create 404 route
 - [x] Create 404 page
 - [x] Create login page
-- [ ] Style the 'login page'
+- [x] Style the 'login page'
+- [x] Store login cookies
+- [ ] Create login API Handler
