@@ -25,3 +25,5 @@
 - [x] Style the 'login page'
 - [x] Store login cookies
 - [ ] Create login API Handler
+- [x] Create error message component
+- [x] Validate login form

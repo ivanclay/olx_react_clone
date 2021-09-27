@@ -1,6 +1,6 @@
 const OlxAPI = {
     login: async (email, senha) => {
-        return {};
+        return {error: 'Funcionalidade incompleta'};
     }
 };
 
