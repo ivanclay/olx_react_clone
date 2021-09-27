@@ -29,3 +29,4 @@
 - [x] Create error message component
 - [x] Validate login form
 - [x] Implement login API consumer
+- [ ] Implement logout
