@@ -25,8 +25,10 @@
 - [x] Create login page
 - [x] Style the 'login page'
 - [x] Store login cookies
-- [ ] Create login API Handler
+- [x] Create login API Handler
 - [x] Create error message component
 - [x] Validate login form
 - [x] Implement login API consumer
-- [ ] Implement logout
+- [x] Implement logout
+- [x] Create user registration layout
+- [x] Implement getStateAddress API consumer
