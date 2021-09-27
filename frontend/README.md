@@ -11,6 +11,7 @@
     - [x] react-router-dom
     - [x] styled-components
     - [x] js-cookie
+    - [x] qs
 - [x] Configure Redux
 - [x] Configure Router
 - [x] Create Header Component
@@ -27,3 +28,4 @@
 - [ ] Create login API Handler
 - [x] Create error message component
 - [x] Validate login form
+- [x] Implement login API consumer

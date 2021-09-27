@@ -29,6 +29,8 @@ const Page = () => {
             doLogin(json.token, keepLoggedIn);
             window.location.href = '/';
         }
+
+        setDisabled(false);
     }
 
     return (
