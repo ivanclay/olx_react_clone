@@ -42,3 +42,4 @@
 - [x] Style the 'ADS' Area
 - [ ] Create ADS page
 - [ ] Style the 'ADS' page
+- [x] Create a Fake loading template
