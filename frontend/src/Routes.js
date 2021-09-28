@@ -5,6 +5,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import AdPage from './pages/AdPage';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -21,6 +22,9 @@ export default () => {
             </Route>
             <Route path="/signup">
                 <SignUp />
+            </Route>
+            <Route path="/ad/:id">
+                <AdPage />
             </Route>
             <Route path="*">
                 <NotFound />

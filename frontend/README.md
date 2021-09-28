@@ -40,3 +40,5 @@
 - [x] Implement getAds API consumer
 - [x] Create ADS component
 - [x] Style the 'ADS' Area
+- [ ] Create ADS page
+- [ ] Style the 'ADS' page
