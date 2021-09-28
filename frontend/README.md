@@ -34,3 +34,6 @@
 - [x] Implement getStateAddress API consumer
 - [x] Implement user registration
 - [x] Create Search Area Layout
+- [x] Show list of states in SearchBox Area
+- [x] Implement getCategories API consumer
+- [x] Show list of categories in Search Page
