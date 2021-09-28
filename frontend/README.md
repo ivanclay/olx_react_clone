@@ -37,3 +37,5 @@
 - [x] Show list of states in SearchBox Area
 - [x] Implement getCategories API consumer
 - [x] Show list of categories in Search Page
+- [ ] Create ADS component
+- [ ] Style the 'ADS' Area
