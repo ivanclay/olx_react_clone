@@ -49,3 +49,5 @@
 - [x] Show seller data
 - [x] Implement Related offers
 - [x] Implement breadcrumb links
+- [x] Implement private routes
+- [ ] Create post ads page
