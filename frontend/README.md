@@ -12,6 +12,7 @@
     - [x] styled-components
     - [x] js-cookie
     - [x] qs
+    - [x] react-slideshow-image
 - [x] Configure Redux
 - [x] Configure Router
 - [x] Create Header Component
@@ -43,3 +44,5 @@
 - [ ] Create ADS page
 - [ ] Style the 'ADS' page
 - [x] Create a Fake loading template
+- [x] Implement image slide show
+- [x] Need to import style.css from react-slideshow-image (new version)

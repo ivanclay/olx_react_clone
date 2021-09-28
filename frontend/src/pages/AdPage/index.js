@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 import useApiOlx from "../../helpers/OlxAPI";
 
 import { 
@@ -12,8 +14,28 @@ const Page = () => {
     const api = useApiOlx();
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
-    const [adInfo, setAdInfo] = useState([]);
+    const [adInfo, setAdInfo] = useState({});
 
+    useEffect(() => {
+        const getAdInfo = async (id) => {
+            const json = await api.getAd(id, true);
+            setAdInfo(json);
+            setLoading(false);
+        };
+
+        getAdInfo(id);
+
+    },[]);
+
+    const formatDate = (date) => {
+        let cDate = new Date(date);
+        let months = ['jan','fev', 'mar','abr','mai','jun','jul', 'ago', 'set', 'out', 'nov', 'dez'];
+        let cDay = cDate.getDay();
+        let cMonth = cDate.getMonth();
+        let cYear = cDate.getFullYear();
+
+        return `${cDay} de ${months[cMonth]} de ${cYear}`;
+    }
     
     return (
         <PageContainer>
@@ -24,12 +46,29 @@ const Page = () => {
                             {loading &&
                                 <Fake height={300}/>
                             }
+                            {adInfo.images && 
+                                <Slide>
+                                    {adInfo.images.map((img, k) => 
+                                        <div key={k} className="each-slide">
+                                            <img src={img} alt=""/>
+                                        </div>
+                                    )}
+                                </Slide>
+                               }
                        </div>
                        <div className="adInfo">
                            <div className="adName">
-                               {loading &&
-                                <Fake height={20}/>
+                               {loading && <Fake height={20}/>}
+                               {adInfo.title && 
+                                <h2>{adInfo.title}</h2>
                                }
+                                {adInfo.dateCreated && 
+                                <small>{formatDate(adInfo.dateCreated)}</small>}
+                                {adInfo.description}
+                                <hr/>
+                                {adInfo.views && 
+                                    <small>Visualizações: {adInfo.views}</small>
+                                }
                            </div>
                            <div className="adDescription">
                            {loading &&
