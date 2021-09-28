@@ -46,3 +46,4 @@
 - [x] Create a Fake loading template
 - [x] Implement image slide show
 - [x] Need to import style.css from react-slideshow-image (new version)
+- [x] Show seller data
