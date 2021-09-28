@@ -47,3 +47,5 @@
 - [x] Implement image slide show
 - [x] Need to import style.css from react-slideshow-image (new version)
 - [x] Show seller data
+- [x] Implement Related offers
+- [x] Implement breadcrumb links

@@ -96,3 +96,29 @@ s        }
         }
     }
 `;
+
+export const OthersArea = styled.div`
+    h2 {
+        font-size: 20px;
+    }
+
+    .list {
+        display: flex;
+
+        .adItem {
+            width: 25%;
+        }
+    }
+`;
+
+export const BreadCrumb = styled.div`
+    font-size: 13px;
+    margin-top: 20px;
+
+    a {
+        display: inline-block;
+        margin:0px 5px;
+        text-decoration: underline;
+        color: #000;
+    }
+`;

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import useApiOlx from "../../helpers/OlxAPI";
 
+import AdItem from '../../components/partials/AdItem';
 import { 
     PageContainer
 } from "../../components/MainComponents";
-import { PageArea, Fake } from './styled';
+import { PageArea, Fake, OthersArea, BreadCrumb } from './styled';
 
 
 const Page = () => {
@@ -39,6 +40,17 @@ const Page = () => {
     
     return (
         <PageContainer>
+            {adInfo.category &&
+                <BreadCrumb>
+                    Você está aqui: 
+                    <Link to="/">Home</Link>
+                    /
+                    <Link to={`/ads?state=${adInfo.stateName}`}>{adInfo.stateName}</Link>
+                    /
+                    <Link to={`/ads?state=${adInfo.stateName}&cat=${adInfo.category.slug}`}>{adInfo.category.name}</Link>
+                    / {adInfo.title}
+                </BreadCrumb>
+            }
            <PageArea>
                <div className="leftSide">
                    <div className="box">
@@ -107,7 +119,21 @@ const Page = () => {
                     }
                  
                </div>
+
+              
            </PageArea>
+           <OthersArea>
+                {adInfo.others &&
+                    <>
+                            <h2>Outras ofertas do vendedor</h2>
+                            <div className="list">
+                                {adInfo.others.map((i,k)=>
+                                    <AdItem key={k} data={i} />
+                                )}
+                            </div>
+                        </>
+                    }
+            </OthersArea>
         </PageContainer>
     );
 }
