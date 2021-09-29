@@ -43,11 +43,13 @@ const Header = () => {
                             <li>
                                 <button onClick={handleLogout}>Sair</button>
                             </li>
-                            <li>
-                                <Link to="/post-an-ad" className="button">Anunciar</Link>
-                            </li>
+                           
                         </>
                     }
+
+                    <li>
+                        <Link to="/post-an-ad" className="button">Anunciar</Link>
+                    </li>
                     
                     
                 </ul>

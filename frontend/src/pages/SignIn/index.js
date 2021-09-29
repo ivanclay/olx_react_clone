@@ -78,7 +78,13 @@ const Page = () => {
                             />
                         </div>
                     </label>
-                    <button disabled={disabled}>Fazer login</button>
+                    <label className="area">
+                        <div className="area--title"></div>
+                        <div className="area--input">
+                        <button disabled={disabled}>Fazer login</button>
+                        </div>
+                    </label>
+                   
                 </form>
             </PageArea>
         </PageContainer>

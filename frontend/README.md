@@ -50,4 +50,6 @@
 - [x] Implement Related offers
 - [x] Implement breadcrumb links
 - [x] Implement private routes
-- [ ] Create post ads page
+- [x] Create post ads page
+- [x] Layout Adjustments (signin, signup, post ads)
+- [ ] Implement post ads page
