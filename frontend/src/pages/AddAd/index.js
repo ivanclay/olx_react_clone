@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import MaskedInput from "react-text-mask";
 import { createNumberMask } from "text-mask-addons";
 import { PageArea } from "./styled";
@@ -13,6 +14,7 @@ import {
 const Page = () => {
     const api = useApiOlx();
     const fileField = useRef();
+    const history = useHistory();
 
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('');
@@ -36,14 +38,43 @@ const Page = () => {
         e.preventDefault();
         setDisabled(true);
         setError('');
-        // const json = await api.login(email, password);
 
-        // if(json.error){
-        //     setError(json.error);
-        // }else{
-        //     doLogin(json.token, keepLoggedIn);
-        //     window.location.href = '/';
-        // }
+        let errors = [];
+
+        if(!title.trim()){
+            errors.push('Sem título.');
+        }
+
+        if(!category){
+            errors.push('Categoria não selecionanda.')
+        }
+        
+        if(errors.length === 0 ){
+            const fData = new FormData();
+            fData.append('title', title);
+            fData.append('price', price);
+            fData.append('priceneg', priceNegotiable);
+            fData.append('desc', description);
+            fData.append('cat', category);
+
+            if(fileField.current.files.length > 0){
+                for (let i = 0; i < fileField.current.files.length; i++) {
+                    fData.append('img',fileField.current.files[i]);
+                }
+            }
+
+            const json = await api.addAd(fData);
+
+            if(!json.error){
+                history.push(`/ad/${json.id}`);
+                return;
+            }else{
+                setError(json.error);
+            }
+
+        }else{
+            setError(errors.join("\n"));
+        }
 
         setDisabled(false);
     }
