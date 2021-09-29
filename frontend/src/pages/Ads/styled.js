@@ -80,6 +80,7 @@ export const PageArea = styled.div`
        
         .pagination {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             margin: 10px 0;
@@ -93,6 +94,16 @@ export const PageArea = styled.div`
                 border: 1px solid #FFF;
                 font-size: 14px;
                 margin-right: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px solid #999;
+                }
+
+                &.active {
+                    cursor: default;
+                    background-color: #CCC;
+                }
             }
         }
     }
