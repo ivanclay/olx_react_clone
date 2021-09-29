@@ -13,6 +13,8 @@
     - [x] js-cookie
     - [x] qs
     - [x] react-slideshow-image
+    - [ ] react-text-mask (--force -> react 17.*)
+    - [ ] text-mask-addons
 - [x] Configure Redux
 - [x] Configure Router
 - [x] Create Header Component
