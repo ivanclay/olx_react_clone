@@ -55,3 +55,4 @@
 - [x] Create post ads page
 - [x] Layout Adjustments (signin, signup, post ads)
 - [ ] Implement post ads page
+- [ ] Implement submit post ads page
