@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import AdPage from './pages/AdPage';
 import AddAd from './pages/AddAd';
+import Ads from './pages/Ads';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -30,6 +31,9 @@ export default () => {
             </RouteHandler>
             <RouteHandler path="/ad/:id">
                 <AdPage />
+            </RouteHandler>
+            <RouteHandler path="/ads">
+                <Ads />
             </RouteHandler>
             <RouteHandler path="*">
                 <NotFound />

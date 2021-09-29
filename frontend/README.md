@@ -57,3 +57,5 @@
 - [x] Implement post ads page
 - [x] Implement submit post ads page
 - [x] Test ad registration
+- [ ] Create list item pages
+- [ ] Implement list item pages
