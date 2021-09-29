@@ -74,8 +74,26 @@ export const PageArea = styled.div`
            flex-wrap: wrap;
 
            .adItem {
-            width: 33%;
+                width: 33%;
+           }
         }
-       }
+       
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+
+            .pagItem {
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #FFF;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+        }
     }
 `;

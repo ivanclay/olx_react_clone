@@ -60,4 +60,4 @@
 - [x] Create list item pages
 - [x] Implement list item pages
 - [x] Implement item filter
-- [ ] Pagination
+- [ ] Implement Pagination
