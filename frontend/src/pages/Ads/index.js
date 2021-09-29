@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { PageArea } from "./styled";
-//import AdItem from "../../components/partials/AdItem"
+
+import AdItem from "../../components/partials/AdItem"
 import useApiOlx from "../../helpers/OlxAPI";
 
 import { 
     PageContainer
 } from "../../components/MainComponents";
 
+let timer;
+
 const Page = () => {
     const api = useApiOlx();
+    const history = useHistory();
+
     const useQueryString = () => {
         return new URLSearchParams( useLocation().search );
     }
@@ -23,6 +28,49 @@ const Page = () => {
     const [stateAddressList, setStateAddressList] = useState([]);
     const [categories, setCategories] = useState([]);
     const [adList, setAdList] = useState([]);
+
+    const [resultOpacity, setResultOpacity] = useState(1);
+
+    const getAdsList = async () => {
+        const json = await api.getAds({
+            sort: 'desc',
+            limit: 9,
+            q,
+            cat,
+            state: stateAddress
+        });
+
+        setAdList(json.ads);
+        setResultOpacity(1);
+    }
+
+    useEffect(() => {
+        let queryString = [];
+        if(q){
+            queryString.push(`q=${q}`);
+        }
+
+        if(cat){
+            queryString.push(`cat=${cat}`);
+        }
+
+        if(stateAddress){
+            queryString.push(`state=${stateAddress}`);
+        }
+
+
+        history.replace({
+            search:`?${queryString.join('&')}`
+        });
+
+        if(timer) {
+            clearTimeout(timer);
+        }
+
+        timer = setTimeout(getAdsList,2000);
+        setResultOpacity(0.3);
+
+    }, [q, cat, stateAddress])
 
     useEffect(() => {
         const getStatesAddress = async () => {
@@ -40,17 +88,6 @@ const Page = () => {
         getCategories();
     },[]);
 
-    useEffect(() => {
-        const getRecentAds = async () => {
-                const json = await api.getAds({
-                    sort: 'desc',
-                    limit: 8
-                });
-                setAdList(json.ads);
-        }
-        getRecentAds();
-    },[]);
-
     return (
             <PageContainer>
                 <PageArea>
@@ -61,9 +98,10 @@ const Page = () => {
                                 name="q" 
                                 placeholder="O que você procura?"
                                 value={q}
+                                onChange={e=>setQ(e.target.value)}
                             />
                             <div className="filterName">Estado: </div>
-                            <select name="state" value={stateAddress}>
+                            <select name="state" value={stateAddress} onChange={e=>setStateAddress(e.target.value)}>
                                 <option></option>
                                 {stateAddressList &&
                                     stateAddressList.map((i,k)=> 
@@ -75,7 +113,11 @@ const Page = () => {
                             <ul>
                                 {categories &&
                                     categories.map((i,k)=>
-                                    <li key={k} className={cat==i.slug ? 'categoryItem active' : 'categoryItem'}>
+                                    <li 
+                                        key={k} 
+                                        className={cat===i.slug ? 'categoryItem active' : 'categoryItem'}
+                                        onClick={()=>setCat(i.slug)}
+                                        >
                                         <img src={i.img} alt=""/>
                                         <span>{i.name}</span>
                                     </li>
@@ -87,7 +129,13 @@ const Page = () => {
                         </form>
                     </div>
                     <div className="rightSide">
-                        .... restante
+                        <h2>Resultados para:</h2>
+                        <span>{q} | {stateAddress} | {cat}</span>
+                        <div className="list" style={{opacity:resultOpacity}}>
+                            {adList.map((i,k)=>
+                                <AdItem key={k} data={i}/>
+                            )}
+                        </div>
                     </div>
                 </PageArea>
             </PageContainer>    

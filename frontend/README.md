@@ -59,3 +59,4 @@
 - [x] Test ad registration
 - [ ] Create list item pages
 - [ ] Implement list item pages
+- [ ] Implement item filter
