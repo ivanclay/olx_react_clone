@@ -3,9 +3,13 @@ import { FooterArea } from './styled';
 
 const Footer = () => {
    return (
-       <FooterArea>
-           <h1>Footer Area</h1>
-       </FooterArea>
+        <> 
+            <hr style={{border: '1px solid #FFF'}}/>
+            <FooterArea>
+                Todos os direitos reservados <br/>
+                Clone Site
+            </FooterArea>
+       </>
    );
 }
 

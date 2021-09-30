@@ -81,4 +81,18 @@ export const HeaderArea = styled.div`
             }
         }
     }
+
+    @media(max-width: 600){
+        & {
+            height: auto;
+        }
+
+       .container {
+           flex-direction: column;
+       } 
+
+       .logo {
+           justify-content: center;
+       }
+    }
 `;

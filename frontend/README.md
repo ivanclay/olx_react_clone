@@ -62,3 +62,5 @@
 - [x] Implement item filter
 - [x] Implement Pagination
 - [ ] Implement Footer
+- [ ] Make design responsive
+- [ ] Generate build
